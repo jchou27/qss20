@@ -1,4 +1,3 @@
-# georgia_jobs_map.py
 # Extra Credit: Geocode Georgia employer addresses and plot on a map
 
 import pandas as pd
@@ -122,7 +121,7 @@ jobs_gdf = gpd.GeoDataFrame(jobs_ga_geo, geometry=geometry, crs="EPSG:4326")
 usa = gpd.read_file("https://www2.census.gov/geo/tiger/GENZ2021/shp/cb_2021_us_state_500k.zip")
 georgia = usa[usa["NAME"] == "Georgia"]
 
-# Plot the map
+# Plotting
 fig, ax = plt.subplots(figsize=(12, 10))
 georgia.plot(ax=ax, color="lightgray", edgecolor="black", linewidth=1)
 jobs_gdf.plot(ax=ax, color="red", markersize=30, alpha=0.6, marker="o", label="H-2A Employer Jobs")
