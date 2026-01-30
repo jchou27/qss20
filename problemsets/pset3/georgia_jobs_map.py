@@ -9,14 +9,13 @@ from shapely.geometry import Point
 import os
 import time
 
-# Load jobs data
 jobs = pd.read_csv("pset3_inputdata/jobs.csv")
 
 # Filter to Georgia employers only
 jobs_ga = jobs[jobs["EMPLOYER_STATE"] == "GA"].copy()
 print(f"Number of Georgia employers: {len(jobs_ga)}")
 
-# Standardize address components (vectorized for speed)
+# Standardize address components
 jobs_ga["EMPLOYER_ADDRESS_1"] = jobs_ga["EMPLOYER_ADDRESS_1"].fillna("").str.strip().str.title()
 jobs_ga["EMPLOYER_CITY"] = jobs_ga["EMPLOYER_CITY"].fillna("").str.strip().str.title()
 
