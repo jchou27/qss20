@@ -11,3 +11,6 @@ Thumbs.db
 
 # Data files
 *.csv
+
+# Credentials
+*.yaml
