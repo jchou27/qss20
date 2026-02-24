@@ -15,3 +15,7 @@ Thumbs.db
 
 # Credentials
 *.yaml
+
+# Output Files
+*.pdf
+*.html
