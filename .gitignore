@@ -19,3 +19,6 @@ Thumbs.db
 # Output Files
 *.pdf
 *.html
+
+# Markdown Files
+*.md
